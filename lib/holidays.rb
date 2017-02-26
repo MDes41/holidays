@@ -92,6 +92,7 @@ module Holidays
       end
 
       Factory::Definition.merger.call(regions, rules_by_month, custom_methods)
+      Holidays::LoadAllDefinitions.call
 
       rules_by_month
     end
